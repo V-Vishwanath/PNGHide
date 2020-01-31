@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 
 def binary(data):
@@ -75,4 +76,28 @@ def decrypt(file):
             break
 
     return plain_text[:-5]
+
+while True :
+    choice = input('''\n\n
+    Choose operation : 
+    1) Encryption
+    2) Decryption 
+    3) Exit
+    
+    Your choice : ''')
+
+    if choice == '1' :
+        img = input('\n\nEnter image name with extension : ')
+        img = os.path.join(os.getcwd(), img)
+        msg = input('Enter message to encrypt : ')
+
+        encrypt(img, msg)
+
+    elif choice == '2' :
+        img = input('\n\nEnter image name with extension : ')
+        img = os.path.join(os.getcwd(), img)
+        print(f'Message : {decrypt(img)}')
+
+    else :
+        break 
 
