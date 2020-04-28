@@ -1,9 +1,9 @@
 import cv2
 import pickle
 import numpy as np
-from os import path, remove
 import tkinter as tk
 import tkinter.ttk as ttk
+from os import path, remove
 from PIL import Image, ImageTk
 from tkinter import filedialog, messagebox
 
